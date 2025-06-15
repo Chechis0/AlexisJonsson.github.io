@@ -1,0 +1,152 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1DB954; /* Spotify Green */
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#auth-section, #profile-section, #recommendations-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#auth-section a {
+    color: #1DB954;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#auth-section a:hover {
+    text-decoration: underline;
+}
+
+#card-container {
+    min-height: 350px; /* Placeholder height, can be adjusted based on card content */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex; /* For centering content like loading/error messages or the card itself */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center (works best if container has fixed height or content is smaller) */
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center; /* For text messages that are direct children */
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px; /* Max width of the card itself */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center; /* Center card content */
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+#controls {
+    text-align: center;
+    margin-top: 10px; /* Add some space if card is short */
+}
+
+#controls button {
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#controls button:hover {
+    background-color: #1AA34A;
+}
+
+#dislike-btn {
+    background-color: #f44336; /* Red for dislike */
+}
+#dislike-btn:hover {
+    background-color: #d32f2f;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+
+/* Error message styling */
+.error-message {
+    color: #D8000C; /* Darker red for text */
+    background-color: #FFD2D2; /* Light red background */
+    border: 1px solid #D8000C;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px auto; /* Auto margins for horizontal centering if it's a block */
+    display: inline-block; /* Or block with text-align: center on parent */
+    max-width: 90%; /* Ensure it doesn't go too wide */
+}
+
+/* Profile details specific alignment for loading/error messages */
+#profile-details {
+    text-align: center; /* Center loading/error messages */
+    min-height: 100px; /* Give some space for messages */
+}
+#profile-details .artist-list {
+    text-align: left; /* Reset for actual list */
+}
+
+
+/* Placeholder styling for card content - these are also in JS, consolidate if time permits */
+.album-art-placeholder, .artist-image-placeholder {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align:center;
+     margin-left: auto; /* Center block elements */
+     margin-right: auto;
+}
+
+.card .album-art {
+    display: block; /* Allow margin auto to work for centering */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+/* Ensure audio player is responsive and not too wide */
+.card .track-preview {
+    width: 100%;
+    max-width: 280px; /* Or adjust to fit card padding */
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

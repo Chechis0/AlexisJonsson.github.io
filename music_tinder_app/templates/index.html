@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Tinder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Music Tinder</h1>
+    </header>
+
+    <main>
+        <div id="auth-section">
+            <p>{{ status }}</p>
+            {% if not token_info %}
+                <a href="{{ url_for('login') }}">Login with Spotify</a>
+            {% else %}
+                <p><a href="{{ url_for('logout') }}">Logout</a></p>
+            {% endif %}
+        </div>
+
+        <div id="profile-section">
+            <h3>Your Top Artists</h3>
+            <div id="profile-details">
+                <!-- User profile info will go here -->
+                <p id="loading-profile">Loading profile...</p>
+            </div>
+        </div>
+
+        <div id="recommendations-section">
+            <h2>Recommendations</h2>
+            <div id="card-container">
+                <!-- Recommendation cards will be injected here by JavaScript -->
+                    <p id="loading-recommendations">Loading recommendations...</p>
+            </div>
+            <div id="controls">
+                <button id="dislike-btn">Dislike</button>
+                <button id="like-btn">Like</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Music Tinder</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

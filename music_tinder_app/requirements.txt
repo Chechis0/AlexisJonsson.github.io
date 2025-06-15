@@ -1,0 +1,4 @@
+Flask
+spotipy
+pytest
+pytest-mock
