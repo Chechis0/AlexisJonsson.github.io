@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+input { margin-right: 10px; }
+#equation-display { margin-top: 20px; font-size: 1.2em; }
+#atom-counts table { border-collapse: collapse; margin-top: 20px; }
+#atom-counts th, #atom-counts td { border: 1px solid #ccc; padding: 4px 8px; text-align: center; }
+#steps p { margin: 0; }
